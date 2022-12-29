@@ -12,8 +12,9 @@ const player = new Player(iframe);
 // player.getVideoTitle().then(function(title) {
 //     console.log('title:', title);
 // });
-const onPlay = function({date}) {
-    localStorage.setItem('videoplayer-current-time', date);
+const onPlay = function (data) {
+    let time = data.seconds;
+    localStorage.setItem('videoplayer-current-time', time);
     console.log('played the video!');
 };
 
